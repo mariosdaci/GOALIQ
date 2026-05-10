@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GOALIQ - Football AI App</title>
+  <style>
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#080808;
+      color:white;
+    }
+    .app{
+      max-width:430px;
+      margin:auto;
+      min-height:100vh;
+      background:linear-gradient(180deg,#111,#050505);
+      padding-bottom:80px;
+    }
+    .top{
+      padding:24px 18px;
+      background:#ff7a00;
+      color:#111;
+      border-bottom-left-radius:28px;
+      border-bottom-right-radius:28px;
+    }
+    .top h1{margin:0;font-size:34px}
+    .top p{margin:6px 0 0;font-weight:bold}
+    .section{padding:18px}
+    .title{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:12px;
+    }
+    .title h2{margin:0;font-size:20px}
+    .badge{
+      background:#ff7a00;
+      color:#111;
+      padding:6px 10px;
+      border-radius:20px;
+      font-size:12px;
+      font-weight:bold;
+    }
+    .card{
+      background:#171717;
+      border:1px solid #2a2a2a;
+      border-radius:22px;
+      padding:18px;
+      margin-bottom:14px;
+      box-shadow:0 10px 25px rgba(0,0,0,.35);
+    }
+    .league{
+      color:#ff7a00;
+      font-size:13px;
+      font-weight:bold;
+      margin-bottom:12px;
+    }
+    .match{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      font-size:18px;
+      font-weight:bold;
+    }
+    .score{
+      background:#0b0b0b;
+      border:1px solid #ff7a00;
+      padding:8px 12px;
+      border-radius:14px;
+      color:#ff7a00;
+      white-space:nowrap;
+    }
+    .prediction{
+      margin-top:14px;
+      background:#241300;
+      color:#ff9a2b;
+      padding:12px;
+      border-radius:14px;
+      font-size:14px;
+      font-weight:bold;
+    }
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+      margin-top:14px;
+    }
+    .stat{
+      background:#0d0d0d;
+      border-radius:15px;
+      padding:12px;
+      text-align:center;
+    }
+    .stat strong{
+      display:block;
+      color:#ff7a00;
+      font-size:20px;
+    }
+    .btn{
+      margin-top:15px;
+      background:#ff7a00;
+      color:#111;
+      border:none;
+      width:100%;
+      padding:14px;
+      border-radius:16px;
+      font-weight:bold;
+      font-size:15px;
+    }
+    .players p{
+      background:#111;
+      padding:12px;
+      border-radius:14px;
+      margin:8px 0;
+    }
+    .nav{
+      position:fixed;
+      bottom:0;
+      left:50%;
+      transform:translateX(-50%);
+      max-width:430px;
+      width:100%;
+      background:#111;
+      border-top:1px solid #292929;
+      display:flex;
+      justify-content:space-around;
+      padding:12px 0;
+    }
+    .nav div{
+      color:#aaa;
+      font-size:12px;
+      text-align:center;
+    }
+    .nav .active{color:#ff7a00;font-weight:bold}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <div class="top">
+      <h1>GOALIQ ⚽</h1>
+      <p>AI Football Predictions & Live Stats</p>
+    </div>
+
+    <div class="section">
+      <div class="title">
+        <h2>Live Matches</h2>
+        <span class="badge">LIVE</span>
+      </div>
+
+      <div class="card">
+        <div class="league">Champions League</div>
+        <div class="match">
+          <span>Real Madrid</span>
+          <span class="score">2 - 1</span>
+          <span>Barcelona</span>
+        </div>
+        <div class="prediction">AI Prediction: Real Madrid 68% πιθανότητα νίκης</div>
+        <div class="stats">
+          <div class="stat"><strong>58%</strong>Ball</div>
+          <div class="stat"><strong>7</strong>Shots</div>
+          <div class="stat"><strong>4</strong>Corners</div>
+        </div>
+        <button class="btn">View Full Analysis</button>
+      </div>
+
+      <div class="card">
+        <div class="league">Premier League</div>
+        <div class="match">
+          <span>Arsenal</span>
+          <span class="score">1 - 1</span>
+          <span>Man City</span>
+        </div>
+        <div class="prediction">AI Prediction: Over 2.5 Goals 61%</div>
+      </div>
+
+      <div class="title">
+        <h2>Top Players</h2>
+        <span class="badge">HOT</span>
+      </div>
+
+      <div class="card players">
+        <p>🔥 Mbappé - 9.1 rating</p>
+        <p>⚡ Haaland - 8.8 rating</p>
+        <p>🎯 Bellingham - 8.6 rating</p>
+      </div>
+
+      <div class="card">
+        <h2>GOALIQ PRO</h2>
+        <p>Σύντομα: πραγματικά live scores, ειδοποιήσεις, αγαπημένες ομάδες και AI ανάλυση αγώνων.</p>
+        <button class="btn">Coming Soon</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav">
+    <div class="active">🏠<br>Home</div>
+    <div>📊<br>Stats</div>
+    <div>🤖<br>AI</div>
+    <div>⭐<br>Favorites</div>
+  </div>
+</body>
+</html>
